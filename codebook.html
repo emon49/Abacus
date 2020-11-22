@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./CSS/codebook.css">
+  <link rel="icon" href="./favicon.png">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+  <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+  <title>Code Book</title>
+
+</head>
+
+<body>
+
+  <!-- Heading Start -->
+
+  <div class="header">
+    <div class="container">
+
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand " href="#">
+          <div class="title">Abacus</div>
+          <div class="pick-up-line">
+            <p>Journey Starts Here</p>
+          </div>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item ">
+              <a class="nav-link" href="index.html">Home </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="./ourprograms.html">Our Programs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./cpfaq.html">CP FAQ</a>
+            </li>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="./achievements.html">Achievements</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./noticeboard.html">Notice Board</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Code Book</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="./mentors.html">Meet the Team</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+    </div>
+
+    <div class="container des-edit">
+      <div class="row">
+        <div class="col">
+          <div class="description">
+            <h1>Algorithm Code Book</h1>
+            <p>This is our algorithm codebook. Here we keep all our algorithm and data structure codes for demo purpose.
+            </p>
+            <a href="./signin.html"><button type="button" class="btn ">Buy Course</button></a>
+
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Head End -->
+
+
+
+  <!-- Code List Section Start -->
+
+  <div class="aside">
+    <ul>
+      <li class="titl">
+        <h1>Template</h1>
+        <ul>
+          <li>Contest Template</li>
+        </ul>
+      </li>
+      <li class="titl">
+        <h1>Number Theory</h1>
+        <ul>
+          <li> <a href="#sieve"> Sieve </a> </li>
+          <li> <a href="#bitsieve"> Bitwise Sieve </a> </li>
+          <li> <a href="#segsieve"> Segmented Sieve </a> </li>
+          <li> <a href="#nod"> Number of Divisor </a> </li>
+          <li> <a href="#eulartor"> Euler Totient </a> </li>
+          <li> <a href="#eulartorpre"> Euler Totient Precompute </a> </li>
+          <li> <a href="#exteuclid"> Extended Euclid </a> </li>
+          <li> <a href="#bigmod"> Big Mod </a> </li>
+          <li> <a href="#modinverse"> Mod Inverse </a> </li>
+          <li> <a href="#lindioeq"> Linear Diophantine Equation </a> </li>
+          <li> <a href="#chinremthe">Chinese Remainder Theorem</a> </li>
+          <li> <a href="#mobifunc">Mobius Function</a> </li>
+        </ul>
+      </li>
+      <li class="titl">
+        <h1>Graph Theory</h1>
+        <ul>
+          <li>Breadth-first search (BFS)</li>
+          <li>0-1 BFS</li>
+          <li>Dijkstra</li>
+          <li> Shortest Path Faster Algorithm (SPFA)</li>
+          <li>Floyd–Warshall</li>
+          <li>Depth-first search (DFS)</li>
+          <li>Articulation Point</li>
+          <li>Articulation Bridge</li>
+          <li>Biconnected Component (BCC)</li>
+          <li>Block-Cut Tree</li>
+          <li>Strongly Connected Components (SCC) – Kosaraju</li>
+          <li>Strongly Connected Components (SCC) – Tarjan</li>
+          <li>2 – SAT</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+
+
+  <!-- Code List Section End -->
+
+
+
+  <!-- Sieve Template -->
+  <div class="temp-title">
+    <h2 id="sieve">Sieve</h2>
+  </div>
+  <div class="cont">
+
+    <table>
+      <caption>Sieve Template</caption>
+      <tr>
+        <td class="num">&nbsp;1</td>
+        <td style="padding-left: 16px;">#define mx 50006</td>
+      </tr>
+      <tr>
+        <td class="num">&nbsp;2</td>
+        <td style="padding-left: 16px;">vector &lt;int&gt; prime;</td>
+      </tr>
+      <tr>
+        <td class="num">&nbsp;3</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="num">&nbsp;4</td>
+        <td style="padding-left: 16px;">bool vis[mx];</td>
+      </tr>
+      <tr>
+        <td class="num">&nbsp;5</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="num">&nbsp;6</td>
+        <td style="padding-left: 16px;">void sieve() {</td>
+      </tr>
+      <tr>
+        <td class="num">&nbsp;7</td>
+        <td style="padding-left: 49px;">int x=sqrt((int)mx);</td>
+      </tr>
+      <tr>
+        <td class="num">&nbsp;8</td>
+        <td style="padding-left: 49px;">for(int i=3; i&lt;=x; i+=2) {</td>
+      </tr>
+      <tr>
+        <td class="num">&nbsp;9</td>
+        <td style="padding-left: 73px;">if(vis[i]==0) {</td>
+      </tr>
+      <tr>
+        <td class="num">10</td>
+        <td style="padding:0px 150px 0px 94px;"> for(int j=i*i; j&lt;mx; j+=2*i) </td>
+      </tr>
+      <tr>
+        <td class="num">11</td>
+        <td style="padding-left: 119px;">vis[j]=1; </td>
+      </tr>
+      <tr>
+        <td class="num">12</td>
+        <td style="padding-left: 73px;">} </td>
+      </tr>
+      <tr>
+        <td class="num">13</td>
+        <td style="padding-left: 49px;">} </td>
+      </tr>
+      <tr>
+        <td class="num">14</td>
+        <td style="padding-left: 49px;">prime.pb(2); </td>
+      </tr>
+      <tr>
+        <td class="num">15</td>
+        <td style="padding-left: 49px;">for(int i=3; i&lt;mx; i+=2) </td>
+      </tr>
+      <tr>
+        <td class="num">16</td>
+        <td style="padding-left: 73px;"> if(vis[i]==0) </td>
+      </tr>
+      <tr>
+        <td class="num">17</td>
+        <td style="padding-left:94px;">prime.pb(i); </td>
+      </tr>
+      <tr>
+        <td class="num">18</td>
+        <td style="padding-left: 16px;">} </td>
+      </tr>
+      <tr>
+        <td class="num">&nbsp;</td>
+        <td> &nbsp;</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- Siev End -->
+
+
+  <!-- Bitwise Sieve Start -->
+
+  <div class="temp-title">
+    <h2 id="bitsieve">Bitwise Sieve</h2>
+  </div>
+  <div class="cont">
+
+    <table>
+      <caption>Bitwise Sieve Template</caption>
+      <tr>
+        <td class="num">&nbsp;1</td>
+        <td style="padding-left: 16px;" style="width:100px">#define mx 40000000</td>
+      </tr>
+      <tr>
+        <td class="num">&nbsp;2</td>
+        <td style="padding-left: 16px;" style="width:100px">int marked[M/64 + 2];</td>
+      </tr>
+      <tr>
+        <td class="num">&nbsp;3</td>
+        <td style="padding-left: 16px;">vector &lt;int&gt; prime;</td>
+      </tr>
+      <tr>
+        <td class="num">&nbsp;4</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="num">&nbsp;5</td>
+        <td style="padding-left: 16px;">#define on(x) (marked[x/64] & (1&lt;&lt;((x%64)/2)))</td>
+      </tr>
+      <tr>
+        <td class="num">&nbsp;6</td>
+        <td style="padding-left: 16px;">#define mark(x) marked[x/64] |= (1&lt;&lt;((x%64)/2))</td>
+      </tr>
+      <tr>
+        <td class="num">&nbsp;7</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="num">&nbsp;8</td>
+        <td style="padding-left: 16px;">bool isPrime(int num) {</td>
+      </tr>
+      <tr>
+        <td class="num">&nbsp;9</td>
+        <td style="padding-left: 53px;">return num > 1 && (num == 2 || ((num & 1) && !on(num)));{</td>
+      </tr>
+      <tr>
+        <td class="num">&nbsp;10</td>
+        <td style="padding-left: 16px;">}</td>
+      </tr>
+      <tr>
+        <td class="num">&nbsp;11</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="num">&nbsp;12</td>
+        <td style="padding-left: 16px;">void sieve(int n) {</td>
+      </tr>
+      <tr>
+        <td class="num">&nbsp;13</td>
+        <td style="padding-left: 52px;">for (int i = 3; i * i &lt; n; i += 2) {</td>
+      </tr>
+      <tr>
+        <td class="num">&nbsp;14</td>
+        <td style="padding-left: 93px;">if (!on(i)) {</td>
+      </tr>
+      <tr>
+        <td class="num">&nbsp;15</td>
+        <td style="padding-left: 122px;">for (int j = i * i; j &lt;= n; j += i + i) {</td>
+      </tr>
+      <tr>
+        <td class="num">&nbsp;16</td>
+        <td style="padding-left: 170px;">mark(j);</td>
+      </tr>
+      <tr>
+        <td class="num">&nbsp;17</td>
+        <td style="padding-left: 128px;">}</td>
+      </tr>
+      <tr>
+        <td class="num">&nbsp;18</td>
+        <td style="padding-left: 96px;">}</td>
+      </tr>
+      <tr>
+        <td class="num">&nbsp;19</td>
+        <td style="padding-left: 54px;">}</td>
+      </tr>
+      <tr>
+        <td class="num">&nbsp;20</td>
+        <td style="padding-left: 54px;">prime.push_back(2);</td>
+      </tr>
+      <tr>
+        <td class="num">&nbsp;21</td>
+        <td style="padding-left: 54px;">for(int i=3; i&lt;M; i+=2) { </td>
+      </tr>
+      <tr>
+        <td class="num">&nbsp;22</td>
+        <td style="padding-left: 90px;">if(isPrime(i))</td>
+      </tr>
+      <tr>
+        <td class="num">&nbsp;23</td>
+        <td style="padding-left: 118px;">prime.pb(i);</td>
+      </tr>
+      <tr>
+        <td class="num">&nbsp;24</td>
+        <td style="padding-left: 49px;">}</td>
+      </tr>
+      <tr>
+        <td class="num">&nbsp;25</td>
+        <td style="padding-left: 16px;">}</td>
+      </tr>
+      <tr>
+        <td class="num">&nbsp;</td>
+        <td> &nbsp;</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- Bitwise sieve End -->
+
+
+
+
+  <!-- Segmented Sieve Start -->
+
+  <div class="temp-title">
+    <h2 id="segsieve">Segmented Sieve</h2>
+  </div>
+  <div class="cont">
+
+    <table>
+      <caption>Segmented Sieve Template</caption>
+      <tr>
+        <td class="num">&nbsp;1</td>
+        <td style="padding-left: 16px;" style="width:100px">#define mx 100005</td>
+      </tr>
+      <tr>
+        <td class="num">&nbsp;2</td>
+        <td style="padding-left: 16px;" style="width:100px">vector&lt;int&gt;prime;</td>
+      </tr>
+      <tr>
+        <td class="num">&nbsp;3</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td class="num">&nbsp;4</td>
+        <td style="padding-left: 16px;">bool vis[mx];</td>
+      </tr>
+      <tr>
+        <td class="num">&nbsp;5</td>
+        <td style="padding-left: px;"></td>
+      </tr>
+      <tr>
+        <td class="num">&nbsp;6</td>
+        <td style="padding-left: 16px;">void sieve() {</td>
+      </tr>
+      <tr>
+        <td class="num">&nbsp;7</td>
+        <td style="padding-left: 53px;">int x=sqrt((int)mx);</td>
+      </tr>
+      <tr>
+        <td class="num">&nbsp;8</td>
+        <td style="padding-left: 53px;"> for(int i=3; i&lt;=x; i+=2) { </td>
+      </tr>
+      <tr>
+        <td class="num">&nbsp;9</td>
+        <td style="padding-left: 86px;">if(vis[i]==0) {</td>
+      </tr>
+      <tr>
+        <td class="num">&nbsp;10</td>
+        <td style="padding-left: 107px;"> for(int j=i*i; j&lt;mx; j+=2*i)</td>
+      </tr>
+      <tr>
+        <td class="num">&nbsp;11</td>
+        <td style="padding-left: 141px;">vis[j]=1;</td>
+      </tr>
+      <tr>
+        <td class="num">&nbsp;12</td>
+        <td style="padding-left: 92px;">}</td>
+      </tr>
+      <tr>
+        <td class="num">&nbsp;13</td>
+        <td style="padding-left: 65px;">}</td>
+      </tr>
+      <tr>
+        <td class="num">&nbsp;14</td>
+        <td style="padding-left: 65px;">prime.pb(2);</td>
+      </tr>
+      <tr>
+        <td class="num">&nbsp;15</td>
+        <td style="padding-left: 65px;"> for(int i=3; i&lt;mx; i+=2) </td>
+      </tr>
+      <tr>
+        <td class="num">&nbsp;16</td>
+        <td style="padding-left: 102px;">if(vis[i]==0)</td>
+      </tr>
+      <tr>
+        <td class="num">&nbsp;17</td>
+        <td style="padding-left: 133px;">prime.pb(i);</td>
+      </tr>
+      <tr>
+        <td class="num">&nbsp;18</td>
+        <td style="padding-left: 16px;">}</td>
+      </tr>
+      <tr>
+        <td class="num">&nbsp;19</td>
+        <td style="padding-left: 54px;"></td>
+      </tr>
+      <tr>
+        <td class="num">&nbsp;20</td>
+        <td style="padding-left: 54px;"></td>
+      </tr>
+      <tr>
+        <td class="num">&nbsp;21</td>
+        <td style="padding-left:16px;">int segmented_sieve(int a, int b) { </td>
+      </tr>
+      <tr>
+        <td class="num">&nbsp;22</td>
+        <td style="padding-left: 55px;">memset(vis,0,sizeof vis);</td>
+      </tr>
+      <tr>
+        <td class="num">&nbsp;23</td>
+        <td style="padding-left: 55px;">if(b&lt;2) return 0;</td>
+      </tr>
+      <tr>
+        <td class="num">&nbsp;24</td>
+        <td style="padding-left: 55px;">if(a&lt;2) a=2;</td>
+      </tr>
+      <tr>
+        <td class="num">&nbsp;25</td>
+        <td style="padding-left: 55px;">int xx=sqrt((double)b)+1;</td>
+      </tr>
+      <tr>
+        <td class="num">&nbsp;26</td>
+        <td style="padding-left: 55px;">for(ll i=0; i&lt;SZ(prime) && prime[i]&lt;=xx; i++) {</td>
+      </tr>
+      <tr>
+        <td class="num">&nbsp;27</td>
+        <td style="padding-left: 96px;">ll j=(a/prime[i]);</td>
+      </tr>
+      <tr>
+        <td class="num">&nbsp;28</td>
+        <td style="padding-left: 96px;"> if(a%prime[i]!=0) j++;</td>
+      </tr>
+      <tr>
+        <td class="num">&nbsp;29</td>
+        <td style="padding-left: 96px;">j*=prime[i];</td>
+      </tr>
+      <tr>
+        <td class="num">&nbsp;30</td>
+        <td style="padding-left: 96px;">if(j==prime[i]) j+=prime[i];</td>
+      </tr>
+      <tr>
+        <td class="num">&nbsp;31</td>
+        <td style="padding-left: 96px;">for(; j&ltl=b; j+=prime[i])</td>
+      </tr>
+      <tr>
+        <td class="num">&nbsp;32</td>
+        <td style="padding-left: 134px;">vis[j-a]=1;</td>
+      </tr>
+      <tr>
+        <td class="num">&nbsp;33</td>
+        <td style="padding-left: 55px;">}</td>
+      </tr>
+      <tr>
+        <td class="num">&nbsp;34</td>
+        <td style="padding-left: 55px;">int cnt=0;</td>
+      </tr>
+      <tr>
+        <td class="num">&nbsp;35</td>
+        <td style="padding-left: 55px;">for(ll i=a; i&lt;=b; i++)</td>
+      </tr>
+      <tr>
+        <td class="num">&nbsp;36</td>
+        <td style="padding-left: 100px;">if(vis[i-a]==0) cnt++;</td>
+      </tr>
+      <tr>
+        <td class="num">&nbsp;37</td>
+        <td style="padding-left: 55px;">return cnt;</td>
+      </tr>
+      <tr>
+        <td class="num">&nbsp;38</td>
+        <td style="padding-left: 16px;">}</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- Segmented Sieve End -->
+
+
+<!-- Big Mod Starts -->
+
+<div class="temp-title">
+  <h2 id="bigmod">Big Mod </h2>
+</div>
+<div class="cont">
+
+  <table>
+    <caption>Big Mod Template</caption>
+    <tr>
+      <td class="num">&nbsp;1</td>
+      <td style="padding-left: 16px;" style="width:100px">inline long long bigmod (long long a, long long p, long long m) {</td>
+    </tr>
+    <tr>
+      <td class="num">&nbsp;2</td>
+      <td style="padding-left: 56px;" style="width:100px">long long res = 1 % m, x = a % m;</td>
+    </tr>
+    <tr>
+      <td class="num">&nbsp;3</td>
+      <td style="padding-left: 56px;" style="width:100px">while ( p ) {</td>
+    </tr>
+    <tr>
+      <td class="num">&nbsp;4</td>
+      <td style="padding-left: 94px;">if ( p & 1 ) res = ( res * x ) % m;</td>
+    </tr>
+    <tr>
+      <td class="num">&nbsp;5</td>
+      <td style="padding-left: 94px;">x = ( x * x ) % m;</td>
+    </tr>
+    <tr>
+      <td class="num">&nbsp;6</td>
+      <td style="padding-left: 94px;">p >>= 1;</td>
+    </tr>
+    <tr>
+      <td class="num">&nbsp;7</td>
+      <td style="padding-left: 56px;">}</td>
+    </tr>
+    <tr>
+      <td class="num">&nbsp;8</td>
+      <td style="padding-left: 56px;">return res; </td>
+    </tr>
+    <tr>
+      <td class="num">&nbsp;9</td>
+      <td style="padding-left: 16px;">}</td>
+    </tr>
+    <tr>
+    </tr>
+    </table> 
+  </div>
+<!-- Big Mod Ends -->
+
+
+
+
+
+  <footer>
+    <div id="footer-area">
+      <div class="container foot-cont">
+        <div class="row">
+          <div class="col-md-4 col-sm-12">
+            <div class="single-footer">
+
+              <h1>Abacus Academy</h1>
+              <div class="social-media">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-12">
+            <div class="single-footer">
+              <h3>Support</h3>
+              <ul class="link-area">
+                <li><a href="#"> <i class="fa fa-arrow-right" aria-hidden="true"></i> Product Page </a></li>
+                <li><a href="#"> <i class="fa fa-arrow-right" aria-hidden="true"></i> Privacy </a></li>
+                <li><a href="#"> <i class="fa fa-arrow-right" aria-hidden="true"></i> Policies </a></li>
+                <li><a href="#"> <i class="fa fa-arrow-right" aria-hidden="true"></i> Carrers </a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-12">
+            <div class="single-footer">
+              <h3>Contact Us</h3>
+              <ul class="link-area">
+                <li><a href="#"> <i class="fa fa-phone"></i> 01832198319 </a></li>
+                <li><a href="#"> <i class="fa fa-envelope"></i> yourname@gmail.com </a></li>
+                <li><a href="#"> <i class="fa fa-map"></i> Mirpur 12,Avenue-2,Road-15 </a></li>
+                <li><a href="#"> <i class="fa fa-globe"></i> www.abacusacademy.com</a></li>
+
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      <div class="container foot-cont">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="copyright-area text-center">
+              <p>&copy; 2019 All Rights Reserved Abacus Academy</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+
+<script>
+$(function () {
+    // Smooth Scrolling
+    $('a[href*="#"]:not([href="#"])').click(function () {
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            if (target.length) {
+                $('html, body').animate({
+                    scrollTop: target.offset().top
+                }, 1000);
+                return false;
+            }
+        }
+    });
+});
+</script>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>
